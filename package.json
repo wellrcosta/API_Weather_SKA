@@ -1,0 +1,21 @@
+{
+  "name": "api-weather-made-from-ska",
+  "version": "1.0.0",
+  "description": "API Weather",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./bin/server.js"
+  },
+  "keywords": [
+    "api;",
+    "weather;"
+  ],
+  "author": "Wellington Reis Ferreira",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "node-cron": "^2.0.3"
+  }
+}
