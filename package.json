@@ -1,21 +1,31 @@
 {
-  "name": "api-weather-made-from-ska",
+  "name": "api-weather",
   "version": "1.0.0",
-  "description": "API Weather",
+  "description": "Weather API with limited cities",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./bin/server.js"
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wellrcosta/API_Weather_SKA.git"
   },
   "keywords": [
-    "api;",
-    "weather;"
+    "api",
+    "weather",
+    "ska",
+    "automacao"
   ],
-  "author": "Wellington Reis Ferreira",
+  "author": "Wellington Reis",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wellrcosta/API_Weather_SKA/issues"
+  },
+  "homepage": "https://github.com/wellrcosta/API_Weather_SKA#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "fs": "0.0.1-security",
-    "node-cron": "^2.0.3"
+    "node-cron": "^2.0.3",
+    "request": "^2.88.0",
+    "restify": "^8.3.3"
   }
 }
