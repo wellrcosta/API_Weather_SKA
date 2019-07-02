@@ -84,6 +84,12 @@ cron.schedule("*/5 * * * *", () => {
 });
 
 servidor.get('/:cidade', (req, res) => {
+    res.header('content-type', 'json');
+    req.accepts('html');
+    req.accepts('text/html');
+    req.accepts('text/plain');
+    req.accepts('application/json');
+
     switch (req.params.cidade) {
         case "SaoLeopoldo":
             res.send(tempSaoLeopoldo);
@@ -117,11 +123,6 @@ servidor.get('/:cidade', (req, res) => {
             res.send(tempSaoPaulo);
             break;
     }
-});
-
-servidor.pre(function (req, res, next) {
-    req.headers.accept = 'application/json';
-    return next();
 });
 
 servidor.listen(porta, () => {
