@@ -118,6 +118,12 @@ servidor.get('/:cidade', (req, res) => {
             break;
     }
 });
+
+servidor.pre(function (req, res, next) {
+    req.headers.accept = 'application/json';
+    return next();
+});
+
 servidor.listen(porta, () => {
     console.log('Servidor de pé em http://localhost:' + porta);
     console.log('Pra derrubar o servidor: ctrl + c');
