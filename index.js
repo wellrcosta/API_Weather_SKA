@@ -1,5 +1,5 @@
 const restify = require('restify');
-const porta = 8080;
+const porta = process.env.PORT || 8080;
 const servidor = restify.createServer();
 const request = require("request");
 const cron = require("node-cron");
@@ -18,7 +18,7 @@ cron.schedule("*/5 * * * *", () => {
     const Florianopolis = "455861";
     const BeloHorizonte = "455821";
 
-    var sl = 'https://api.hgbrasil.com/weather?woeid=' + SaoLeopoldo + '&array_limit=4&fields=only_results&key=YOUKEYHERE';
+    var sl = 'https://api.hgbrasil.com/weather?woeid=' + SaoLeopoldo + '&array_limit=4&fields=only_results&key=87743011';
     request(sl, {json: true}, (err, res, body) => {
         if (err) {
             return console.log(err);
